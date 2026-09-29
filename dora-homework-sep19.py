@@ -116,7 +116,7 @@ def task_3_delete_items():
     # TODO: Remove "spam" and assign the popped item to removed_item.
     foods.remove("spam")
     removed_item = foods.pop(2)
-    print("Task 3 list:", foods)
+    # OLIVER: Az utolsó elem indexe -1, így ezt is lehetne használni, de a feladat szerint a végső elemet kell eltávolítani, így a pop() hívásnál nem kell indexet megadni.
     print("Task 3 popped item:", removed_item)
 
 
@@ -125,7 +125,7 @@ def task_4_sort_items():
     scores = [42, 17, 88, 63, 29]
     descending_scores = []
     # TODO: Sort scores and create descending_scores with sorted().
-    scores.sort() #nem kell-e eléírnom egy változót?
+    scores.sort()  # nem kell-e eléírnom egy változót? # OLIVER: A sort függvény a listát módosítja, így nem kell új változót létrehozni. A sorted() viszont egy új listát ad vissza, ezért azt érdemes egy változóba menteni.
     descending_scores = sorted(scores, reverse=True)
     print("Task 4 ascending:", scores)
     print("Task 4 descending:", descending_scores)
