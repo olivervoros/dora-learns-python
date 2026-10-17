@@ -66,7 +66,10 @@ print(kor)                    # 18
 # forintban, és hogy hányszor etted a héten. Írd ki mindhármat.
 
 # TODO: ide írd a megoldást
-
+kedvencetel= "teszta"
+ara=2000
+hanyszor=3
+print(f"A kedvenc ételem {kedvencetel}, {ara} ftba kerül és {hanyszor} szor ettem a héten")
 
 # ------------------------------------------------------------
 # 2. feladat ⭐
@@ -78,6 +81,8 @@ print(kor)                    # 18
 pontszam = 25
 
 # TODO: ide írd a megoldást
+szam= (pontszam+10)*2
+print(szam)
 
 
 # ------------------------------------------------------------
@@ -98,6 +103,8 @@ bal_pohar = "víz"
 jobb_pohar = "tej"
 
 # TODO: ide írd a megoldást
+bal_pohar=jobb_pohar
+bal_pohar,jobb_pohar=jobb_pohar,bal_pohar
 
 # print(bal_pohar, jobb_pohar)
 
@@ -156,9 +163,11 @@ print(str(5) + " alma")       # 5 alma
 a = "2024"
 b = 2024
 c = 20.0
-d = "True"
+d = True
 
 # TODO: ide írd a megoldást
+print(type(a))
+
 
 
 # ------------------------------------------------------------
@@ -171,6 +180,7 @@ elso = "12"
 masodik = "8"
 
 # TODO: ide írd a megoldást
+print(int(elso) + int(masodik))
 
 
 # ------------------------------------------------------------
@@ -188,7 +198,8 @@ darab = 3
 tort_szoveg = "3.7"
 
 # TODO: ide írd a megoldást
-
+osszeg=(int(ar)*darab)
+print(int(tort_szoveg))
 
 # ============================================================
 # 3. RÉSZ – f-STRING   (10 perc)
@@ -235,7 +246,7 @@ varos = "Szeged"
 eletkor = 14
 
 # TODO: ide írd a megoldást
-
+print(f"{tanulo} {varos}en lakik és {eletkor} éves.")
 
 # ------------------------------------------------------------
 # 8. feladat ⭐⭐
@@ -246,6 +257,7 @@ eletkor = 14
 termek_ar = 1234.5
 
 # TODO: ide írd a megoldást
+print(f"A termék ára:{termek_ar:.2f} ft")
 
 
 # ------------------------------------------------------------
@@ -259,6 +271,7 @@ szelesseg = 4
 hosszusag = 2.5
 
 # TODO: ide írd a megoldást
+print(f"A szoba {szelesseg} m x {hosszusag} m, a területe {szelesseg*hosszusag} m2.")
 
 
 # ============================================================
@@ -307,6 +320,7 @@ print(f"Jövőre {kor + 1} éves leszel.")
 szin = "kék"
 
 # TODO: ide írd a megoldást
+szin=input("Add meg a kedvenc színed")
 
 
 # ------------------------------------------------------------
@@ -320,6 +334,9 @@ szin = "kék"
 szuletesi_ev = "2010"
 
 # TODO: ide írd a megoldást
+szuletesi_ev= int(input("Kérem a születési évet"))
+hany= 2030-szuletesi_ev
+print(f"2030-ban {hany} éves leszel")
 
 
 # ------------------------------------------------------------
@@ -333,6 +350,9 @@ szuletesi_ev = "2010"
 km = "10"
 
 # TODO: ide írd a megoldást
+km= int(input("Kérem a távolságok km-ben"))
+merfold= km*0.621371
+print(f"{km:.2f} = {merfold:.2f}")
 
 
 # ============================================================
@@ -397,6 +417,9 @@ print(sum(szamok), max(szamok), min(szamok))     # 6 3 1
 napok = ["hétfő", "kedd", "szerda", "csütörtök", "péntek"]
 
 # TODO: ide írd a megoldást
+print(napok[0])
+print(napok[-1])
+print(napok.count)
 
 
 # ------------------------------------------------------------
@@ -411,6 +434,10 @@ napok = ["hétfő", "kedd", "szerda", "csütörtök", "péntek"]
 bevasarlas = ["tej", "kenyér", "tojás"]
 
 # TODO: ide írd a megoldást
+bevasarlas.append("sajt")
+bevasarlas.insert(0, "kávé")
+bevasarlas.remove("kenyér")
+print(bevasarlas)
 
 
 # ------------------------------------------------------------
@@ -425,6 +452,11 @@ bevasarlas = ["tej", "kenyér", "tojás"]
 ertekek = [40, 10, 30, 20, 50]
 
 # TODO: ide írd a megoldást
+print(ertekek[:3])
+print(ertekek[-2:])
+ertekek.sort()
+print(sorted(ertekek))
+print(ertekek)
 
 
 # ------------------------------------------------------------
@@ -441,6 +473,14 @@ ertekek = [40, 10, 30, 20, 50]
 jegyek = [5, 3, 4, 5, 2]
 
 # TODO: ide írd a megoldást
+osszeg= sum(jegyek)
+print(osszeg)
+print(max(jegyek))
+print(min(jegyek))
+db=len(jegyek)
+print(osszeg/db)
+
+
 
 
 # ============================================================
@@ -504,6 +544,8 @@ print("Start!")
 # Írd ki a számokat 1-től 10-ig, mindet külön sorba.
 
 # TODO: ide írd a megoldást
+for szam in range(1,11):
+    print(szam)
 
 
 # ------------------------------------------------------------
@@ -513,7 +555,10 @@ print("Start!")
 # az eredményt. Elvárt kimenet: 5050
 
 # TODO: ide írd a megoldást
-
+osszeg=0
+for szam in range(1,101):
+    osszeg= osszeg+szam
+print(osszeg)
 
 # ------------------------------------------------------------
 # 19. feladat ⭐⭐
@@ -528,7 +573,8 @@ print("Start!")
 csapat = ["Gergő", "Hanna", "Ákos"]
 
 # TODO: ide írd a megoldást
-
+for sorszam, nev in enumerate(["Gergő", "Hanna", "Ákos"], start=1):
+    print(f"{sorszam}. {nev}")
 
 # ------------------------------------------------------------
 # 20. feladat ⭐⭐
@@ -542,6 +588,10 @@ bakterium = 1
 orak = 0
 
 # TODO: ide írd a megoldást
+while bakterium <= 1000:
+    bakterium= bakterium*2
+    orak= orak+1
+print(f"{orak} óra múlva {bakterium} baktérium van.")
 
 
 # ============================================================
@@ -598,6 +648,10 @@ if homerseklet >= 20 and not esik:
 szam = 7
 
 # TODO: ide írd a megoldást
+if szam %2!=0:
+    print("páratlan")
+else:
+    print("páros")
 
 
 # ------------------------------------------------------------
@@ -612,8 +666,16 @@ szam = 7
 
 def osztalyzat(pont):
     # TODO: ide írd a megoldást
-    pass
-
+    if pont >= 90:
+        return 5
+    elif pont >=75:
+        return 4    
+    elif pont >=60:
+        return 3
+    elif pont >= 40:
+        return 2
+    else:
+        return 1
 
 # Teszt:
 # print(osztalyzat(95))       # 5
@@ -633,7 +695,13 @@ def osztalyzat(pont):
 
 def belepo(kor, diak):
     # TODO: ide írd a megoldást
-    pass
+    if kor <6:
+        return 0
+    elif diak==True and kor >= 65:
+        return 1000
+    else:
+        return 2000
+
 
 
 # Teszt:
@@ -695,7 +763,10 @@ print("A program megy tovább.")
 bemenet = "alma"
 
 # TODO: ide írd a megoldást
-
+try:
+    szam= int(bemenet)
+except ValueError:
+    print("Ez nem egy szám!")
 
 # ------------------------------------------------------------
 # 25. feladat ⭐⭐
@@ -725,6 +796,10 @@ szinek = ["piros", "zöld", "kék"]
 hanyadik = 5
 
 # TODO: ide írd a megoldást
+try:
+    print(szinek[4])
+except IndexError:
+    print("Nincs ilyen elem")
 
 
 # ============================================================
@@ -756,7 +831,31 @@ hanyadik = 5
 tetelek = ["450", "700", "ingyen", "1200", "", "300"]
 
 # TODO: ide írd a megoldást
+jo_arak=[]
+hibas=0
+for elem in tetelek:
+    try:
+        ar= int(elem)
+        jo_arak.append(ar)
+    except ValueError:
+        hibas= hibas+1
+        print(f"Kihagyva: {elem}")
 
+jo_db= len(jo_arak)
+print(f"{jo_db} jó tétel, {hibas} hibás")
+
+reszosszeg= sum(jo_arak)
+print(f"Részösszeg: {reszosszeg}")
+
+if reszosszeg > 2000:
+    kedvezmeny= reszosszeg*0.1
+print(f"Kedvezmény: {kedvezmeny}")
+
+fizetendo= reszosszeg-kedvezmeny
+print(f"Fizetendő: {fizetendo}")
+
+
+ 
 
 # ============================================================
 # AMIT MA GYAKOROLTUNK
